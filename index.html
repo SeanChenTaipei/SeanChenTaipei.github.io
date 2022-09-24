@@ -6,24 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SeanChen</title>
-    
+
     <link rel="icon" href="chick.png" type="image/x-icon">
     <link rel="stylesheet" href="main.css" type="text/css">
 </head>
 <body>
     <h1>Hello, World!</h1>
-    <h4>This is a call option price calculator.</h4>
+    <hr>
+    <h3>A call option price calculator. </h4>
+        <p>This calculator follows the well-known <strong>Black-Scholes-Merton</strong>
+            formula to calculate the option prices.
+        </p>
+    <!-- TODO: Add put option formula and the Greeks-->
     <div>
-        <label for="spot">Spot Price:</label><br><input type="number" step=1 name="spot" id="spot" value="1600"><br><br>
-        <label for="k">Strike:</label><br><input type="number" step=1 name="k" id="k" value="1500"><br><br>
-        <label for="t2m">Time2Maturity:</label><br><input type="number" step=0.01 name="t2m" id="t2m" value="0.01"><br><br>
-        <label for="r">Risk-free:</label><br><input type="number" step=0.01 name="r" id="r" value="0.02"><br><br>
-        <label for="sigma">Implied Vol:</label><br><input type="number" step=0.1 name="sigma" id="sigma" value="1.05"><br><br>
+        <label for="spot">Spot Price:</label><br><input type="number" step=1 name="spot" id="spot" value="1600">
+        <br><br>
+        <label for="k">Strike:</label><br><input type="number" step=1 name="k" id="k" value="1500">
+        <br><br>
+        <label for="t2m">Time2Maturity:</label><br><input type="number" step=0.01 name="t2m" id="t2m" value="0.01">
+        <br><br>
+        <label for="r">Risk free rate:</label><br><input type="number" step=0.01 name="r" id="r" value="0.02">
+        <br><br>
+        <label for="sigma">Implied Vol:</label><br><input type="number" step=0.05 name="sigma" id="sigma" value="1.05">
+        <br><br>
     </div>
     
     
     
     <button id="btn">calculate</button>
+
+    <hr>
+
     <div id="result"></div>
     <script src="arithfunc.js"></script>
 </body>
