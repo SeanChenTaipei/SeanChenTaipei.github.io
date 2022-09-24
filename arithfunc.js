@@ -65,7 +65,8 @@ function pricing(){
     var sig = document.getElementById('sigma').valueAsNumber;
     // console.log(S0, K, T, r, typeof sig);
     var p = bsm_call(S0, K, T, r, sig);
-    document.getElementById('result').innerHTML = p;
+    p = Math.round(p*100)/100;
+    document.getElementById('result').innerHTML = "$ " + p;
 }
 // console.log(norm(1));
 // console.log(bsm_call(1650, 1300, 0.01, 0.02, 1.05));
